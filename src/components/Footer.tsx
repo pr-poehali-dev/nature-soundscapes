@@ -6,31 +6,31 @@ const data = {
   twitterLink: "https://twitter.com/digitalhub",
   githubLink: "https://github.com/digitalhub",
   services: {
-    web: "/web-razrabotka",
-    mobile: "/mobilnye-prilozheniya",
-    design: "/ui-ux-dizajn",
-    marketing: "/digital-marketing",
+    web: "#about",
+    mobile: "#concerts",
+    design: "#music",
+    marketing: "#cta",
   },
   about: {
-    story: "/o-nas",
-    team: "/komanda",
-    portfolio: "/portfolio",
-    careers: "/vakansii",
+    story: "#about",
+    team: "#concerts",
+    portfolio: "#music",
+    careers: "#cta",
   },
   help: {
-    faqs: "/faq",
-    support: "/podderzhka",
-    blog: "/blog",
+    faqs: "#about",
+    support: "#cta",
+    blog: "#music",
   },
   contact: {
-    email: "hello@digitalhub.ru",
+    email: "lev.ignatev@music.ru",
     phone: "+7 (495) 123-45-67",
     address: "Москва, Россия",
   },
   company: {
-    name: "ДиджиталХаб",
+    name: "Лев Игнатьев",
     description:
-      "Создаём цифровые продукты, которые помогают бизнесу расти. Веб-разработка, мобильные приложения и дизайн под ключ.",
+      "Музыкант, чьи выступления звучали в Историческом музее и музыкальных школах. Музыка, которая трогает сердце.",
   },
 }
 
@@ -42,23 +42,23 @@ const socialLinks = [
 ]
 
 const aboutLinks = [
-  { text: "О нас", href: data.about.story },
-  { text: "Команда", href: data.about.team },
-  { text: "Портфолио", href: data.about.portfolio },
-  { text: "Вакансии", href: data.about.careers },
+  { text: "О музыканте", href: data.about.story },
+  { text: "Выступления", href: data.about.team },
+  { text: "Музыка", href: data.about.portfolio },
+  { text: "Пригласить", href: data.about.careers },
 ]
 
 const serviceLinks = [
-  { text: "Веб-разработка", href: data.services.web },
-  { text: "Мобильные приложения", href: data.services.mobile },
-  { text: "UI/UX Дизайн", href: data.services.design },
-  { text: "Digital-маркетинг", href: data.services.marketing },
+  { text: "Концерты", href: data.services.web },
+  { text: "Музыкальные школы", href: data.services.mobile },
+  { text: "Частные мероприятия", href: data.services.design },
+  { text: "Творческие вечера", href: data.services.marketing },
 ]
 
 const helpfulLinks = [
-  { text: "FAQ", href: data.help.faqs },
-  { text: "Поддержка", href: data.help.support },
-  { text: "Блог", href: data.help.blog, hasIndicator: true },
+  { text: "О музыканте", href: data.help.faqs },
+  { text: "Связаться", href: data.help.support },
+  { text: "Новые концерты", href: data.help.blog, hasIndicator: true },
 ]
 
 const contactInfo = [
@@ -396,7 +396,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="brand-logo">
-                <div className="brand-icon">DH</div>
+                <div className="brand-icon">ЛИ</div>
                 <span className="brand-name">{data.company.name}</span>
               </div>
               <p className="brand-description">{data.company.description}</p>
@@ -411,7 +411,7 @@ export default function Footer() {
 
             <div className="footer-links">
               <div className="link-column">
-                <h3>О компании</h3>
+                <h3>Навигация</h3>
                 <ul className="link-list">
                   {aboutLinks.map(({ text, href }) => (
                     <li key={text} className="link-item">
@@ -422,7 +422,7 @@ export default function Footer() {
               </div>
 
               <div className="link-column">
-                <h3>Услуги</h3>
+                <h3>Выступления</h3>
                 <ul className="link-list">
                   {serviceLinks.map(({ text, href }) => (
                     <li key={text} className="link-item">
